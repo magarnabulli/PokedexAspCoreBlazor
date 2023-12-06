@@ -1,0 +1,7 @@
+@PokedexAPI_HostAddress = http://localhost:5099
+
+GET {{PokedexAPI_HostAddress}}/api/getpokemon
+Accept: application/json
+
+###
+
