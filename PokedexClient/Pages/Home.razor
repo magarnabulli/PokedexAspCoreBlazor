@@ -4,11 +4,8 @@
 	<div class="main-body">
 		<Header />
 		<div class="main-container">
-			<Navbar/>
+			<Navbar />
 			<Container>
-				<ChildContent>					
-						<PokemonInfo ></PokemonInfo>					
-				</ChildContent>
 			</Container>
 			<Footer />
 		</div>
@@ -16,5 +13,10 @@
 </body>
 </html>
 @code {
+	// protected override void OnAfterRender(bool firstRender)
+	// {
+	// 	Appstate.ChildContentMode = string.Empty;
+	// }
+	
 	
 }

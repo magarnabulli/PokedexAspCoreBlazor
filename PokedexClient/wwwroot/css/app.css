@@ -6,8 +6,25 @@
     --standard-yellow: #F0DBA5;
     --standard-off-white: #E7E7E6;
 }
-body{
+
+.main-body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
     background-color: var(--background);
 }
 
+.main-container {
+    max-width: 70%;
+    margin: 5px;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 10px;
+    border-right: solid 10px;
+    border-bottom-color: var(--standard-red);
+    border-right-color: var(--standard-red);
+    background-color: var(--standard-off-white);
+}
 

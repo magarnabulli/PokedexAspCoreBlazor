@@ -1,8 +1,19 @@
 ﻿<div class="container">
-	@ChildContent
+	@if (Appstate.ChildContentMode.Equals("pokemonInfoPage"))
+	{
+		<PokemonInfo></PokemonInfo>
+	}
+	@if (Appstate.ChildContentMode.Equals("typeinfo"))
+	{
+		<TypeInfo></TypeInfo>
+	}
+	@if(Appstate.ChildContentMode.Equals(""))
+	{
+		<HomeContent></HomeContent>
+	}
 </div>
 
 @code {
-	[Parameter] 
-	public RenderFragment ChildContent { get; set;}
+
+	
 }

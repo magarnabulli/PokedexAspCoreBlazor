@@ -13,6 +13,7 @@ namespace PokedexClient.Components
 			{
 				Console.WriteLine(Appstate.SearchInput);
 				Appstate.PokemonInfo = await PokeapiService.SearchPokemonAsync(Appstate.SearchInput);
+				Appstate.ChildContentMode= "pokemonInfoPage";
 				await CurrentPokemon.InvokeAsync(Appstate.PokemonInfo);
 				Console.WriteLine($"Name: {Appstate.PokemonInfo.Name}");
 				Console.WriteLine($"Name: {CurrentPokemon.HasDelegate}");

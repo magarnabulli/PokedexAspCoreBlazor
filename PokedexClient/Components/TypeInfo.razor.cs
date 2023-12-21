@@ -1,7 +1,7 @@
 ﻿namespace PokedexClient.Components
 {
-	public partial class Toggle
+	public partial class TypeInfo
 	{
-
+	
 	}
 }

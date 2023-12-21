@@ -4,6 +4,6 @@ GET {{PokedexAPI_HostAddress}}/api/getpokemon
 Accept: application/json
 
 ###
-GET https://pokeapi.co/api/v2/pokemon/ditto
+GET https://pokeapi.co/api/v2/pokemon?limit=1000&offset=0
 Accept: application/json
 

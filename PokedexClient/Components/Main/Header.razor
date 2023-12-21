@@ -1,4 +1,9 @@
 ﻿<div class="header">
-	<img src="/header/Header.png" class="poke-header" />
+	<img src="/header/Header.png" class="poke-header" @onclick="@BackHome"/>
 	<img src="/header/pokeballs.png" class="poke-header-balls" />
 </div>
+@code{
+	public void BackHome(){
+		Navman.NavigateTo("/", true);
+	}
+}

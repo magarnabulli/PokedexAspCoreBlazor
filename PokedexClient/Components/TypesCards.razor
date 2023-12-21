@@ -1,0 +1,26 @@
+﻿<div>
+	@foreach (var type in Types)
+	{
+		<CardTemplate>
+			<Title>
+				<a @onclick=@(async () => {await OnClickedType(type);}) class="card-title-link">@type.ToUpper()</a>
+			</Title>
+		</CardTemplate>
+	}
+</div>
+@code {
+
+	public List<string> Types = new List<string>
+		{ "Bug", "Dragon", "Dark", "Electric","Fairy",
+		  "Fighting","Fire","Flying","Ghost","Ground",
+		  "Grass","Ice","Normal","Poison","Psychic",
+		  "Rock","Steel","Water"};
+
+	public async Task OnClickedType(string type)
+	{
+		Appstate.CurrentType = await PokeapiService.GetPokemonTypesAsync(type.ToLower());
+		Appstate.ChildContentMode = "typeinfo";
+		Navman.NavigateTo("/", false);
+	}
+
+}
