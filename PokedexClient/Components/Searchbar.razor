@@ -1,0 +1,10 @@
+﻿<div class="searchbar-container">
+	<input type="text" class="search-input" placeholder="Search..." @bind-value="Appstate.SearchInput" />
+	<div class="search-button">
+		<button href="" @onclick=@(()=> {OnSearch();})><img src="/header/searchicon.png" class="search-icon" /></button>
+	</div>
+</div>
+@code{
+	[Parameter]
+	public EventCallback<PokemonInfoModel> CurrentPokemon { get; set; }
+}

@@ -1,0 +1,13 @@
+﻿
+<button class="nav-button" @onclick="@Clicked">@ButtonTitle</button>
+
+@code {
+	[Parameter]
+	public string? ButtonTitle { get; set; } 
+	[Parameter]
+	public RenderFragment<EventCallback>? LoadComponent { get; set; }
+	public void  Clicked()
+	{
+		Console.WriteLine("is click");
+	}
+}

@@ -1,0 +1,12 @@
+﻿<div>
+	@if (Appstate.PokemonInfo.Name != string.Empty)
+	{
+		<h1>@Appstate.PokemonInfo.Name</h1>
+		<img src="@Appstate.PokemonInfo.Sprites.Front_Default" />
+	}
+</div>
+@code {
+	[Parameter]
+	public EventCallback<PokemonInfoModel> CurrentPokemon { get; set; }
+
+}

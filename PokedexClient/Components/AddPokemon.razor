@@ -1,0 +1,34 @@
+﻿<h3>AddPokemon</h3>
+<div>
+	<EditForm Model="@Appstate.PokemonModel" OnSubmit="AddPokemonAsync">
+		<label>Name</label>
+		<input @bind-value="@Appstate.PokemonModel.Name" type="text" />
+		<label>Sprite</label>
+		<InputFile OnChange="SaveSpriteAsync"></InputFile>
+		<label>Types</label>
+		<ul>
+			@foreach (var item in Enum.GetValues(typeof(PokemonModel.PokeType)))
+			{
+				<li>
+					<input type="checkbox" value="@item" @onchange="eventArgs =>{OnTypeSelect((int)item, eventArgs.Value!);}" />@item
+				</li>
+			}
+		</ul>
+		<label>Height</label>
+		<input @bind-value="@Appstate.PokemonModel.Height" type="number" />
+		<label>Weight</label>
+		<input @bind-value="@Appstate.PokemonModel.Weight" type="number" />
+		<label>Health</label>
+		<input @bind-value="@Appstate.PokemonModel.Health" type="number" />
+		<label>Attack</label>
+		<input @bind-value="@Appstate.PokemonModel.Attack" type="number" />
+		<label>Defense</label>
+		<input @bind-value="@Appstate.PokemonModel.Defense" type="number" />
+		<label>Special Defense</label>
+		<input @bind-value="@Appstate.PokemonModel.SpecialDefense" type="number" />
+		<label>Speed</label>
+		<input @bind-value="@Appstate.PokemonModel.Speed" type="number" />
+		<button>Add</button>
+	</EditForm>
+</div>
+

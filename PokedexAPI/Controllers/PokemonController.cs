@@ -1,11 +1,12 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PokedexDb.Entities;
 using PokedexDb.Services;
 using PokedexShared.Models;
 
 namespace PokedexAPI.Controllers
 {
-	[Route("api/[action]")]
+	[Route("api/pokemon")]
 	[ApiController]
 	public class PokemonController : ControllerBase
 	{
@@ -15,7 +16,7 @@ namespace PokedexAPI.Controllers
 			_pokemonService = pokemonService;
 		}
 		[HttpGet]
-		public async Task<List<PokemonModel>> GetPokemon()
+		public async Task<List<Pokemon>> Get()
 		{
 			try
 			{
@@ -27,8 +28,9 @@ namespace PokedexAPI.Controllers
 			}
 
 		}
+
 		[HttpGet("{id}")]
-		public async Task<PokemonModel> GetOnePokemon(int id)
+		public async Task<Pokemon> Get(int id)
 		{
 			try
 			{
@@ -41,12 +43,12 @@ namespace PokedexAPI.Controllers
 
 		}
 		[HttpPost]
-		public async Task<IResult> AddPokemon([FromBody] PokemonModel pokemon)
+		public async Task<IResult> AddPokemon([FromBody] Pokemon pokemon)
 		{
 			try
 			{
 				await _pokemonService.AddPokemonAsync(pokemon);
-				return Results.Ok();
+				return Results.Ok("Added");
 
 			}
 			catch (Exception e)
@@ -55,11 +57,11 @@ namespace PokedexAPI.Controllers
 			}
 		}
 		[HttpPut("{id}")]
-		public async Task<IResult> EditPokemon(int id, [FromBody] PokemonModel pokemon)
+		public async Task<IResult> EditPokemon(int id,[FromBody] Pokemon pokemon)
 		{
 			try
 			{
-				await _pokemonService.EditPokemonAsync(id, pokemon);
+				await _pokemonService.EditPokemonAsync(id,pokemon);
 				return Results.Ok();
 
 			}

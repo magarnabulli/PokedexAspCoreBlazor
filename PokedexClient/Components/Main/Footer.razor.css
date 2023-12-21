@@ -1,0 +1,17 @@
+﻿.footer {
+    display: flex;
+    border-top: solid 1.5px;
+    border-color:var(--standard-red);
+
+    margin:10px
+}
+
+.links-section {
+    margin-top:7px;
+}
+
+.footer-link {
+    color: var(--background);
+    text-decoration: none;
+    margin-right:8px;
+}

@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokedex", "Pokedex\Pokedex.csproj", "{40B5FB76-EDC7-46F8-B1E4-BC569DAA015D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokedexAPI", "PokedexAPI\PokedexAPI.csproj", "{7354DB2A-AC0B-4F13-8465-8180A4B00538}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokedexAPI", "PokedexAPI\PokedexAPI.csproj", "{7354DB2A-AC0B-4F13-8465-8180A4B00538}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokedexDb", "PokedexDb\PokedexDb.csproj", "{724135BF-466F-429F-BBB8-F327300CDD3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokedexDb", "PokedexDb\PokedexDb.csproj", "{724135BF-466F-429F-BBB8-F327300CDD3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokedexShared", "PokedexShared\PokedexShared.csproj", "{A98654A4-6961-4C4B-8BCF-F81E60709681}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokedexShared", "PokedexShared\PokedexShared.csproj", "{A98654A4-6961-4C4B-8BCF-F81E60709681}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokedexClient", "PokedexClient\PokedexClient.csproj", "{48F34D8A-171B-4475-8FE9-8E7C7312FB9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{40B5FB76-EDC7-46F8-B1E4-BC569DAA015D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{40B5FB76-EDC7-46F8-B1E4-BC569DAA015D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{40B5FB76-EDC7-46F8-B1E4-BC569DAA015D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{40B5FB76-EDC7-46F8-B1E4-BC569DAA015D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7354DB2A-AC0B-4F13-8465-8180A4B00538}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7354DB2A-AC0B-4F13-8465-8180A4B00538}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7354DB2A-AC0B-4F13-8465-8180A4B00538}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{A98654A4-6961-4C4B-8BCF-F81E60709681}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A98654A4-6961-4C4B-8BCF-F81E60709681}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A98654A4-6961-4C4B-8BCF-F81E60709681}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48F34D8A-171B-4475-8FE9-8E7C7312FB9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48F34D8A-171B-4475-8FE9-8E7C7312FB9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48F34D8A-171B-4475-8FE9-8E7C7312FB9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48F34D8A-171B-4475-8FE9-8E7C7312FB9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

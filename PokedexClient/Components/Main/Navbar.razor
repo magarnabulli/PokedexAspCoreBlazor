@@ -1,0 +1,14 @@
+﻿<div class="nav-section">
+	<Searchbar CurrentPokemon="@UpdateCurrentPokemon"></Searchbar>
+	<div>
+		<NavButton Context="login" ButtonTitle="Login"></NavButton>
+		<NavButton Context="signup" ButtonTitle="SignUp"></NavButton>
+	</div>
+</div>
+@code{
+	private void UpdateCurrentPokemon(PokemonInfoModel pokemon)
+	{
+		Appstate.PokemonInfo = pokemon;
+		Navman.NavigateTo("/redirect", false);
+	}
+}

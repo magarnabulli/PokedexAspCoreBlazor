@@ -1,0 +1,12 @@
+﻿.nav-button{
+    min-height:30px;
+    min-width:90px;
+    border:none;
+    margin:10px;
+    background-color: var(--standard-off-white);
+    border-bottom: solid 2px;
+    border-right: solid 2px;
+    border-bottom-color: var(--standard-red);
+    border-right-color: var(--standard-red);
+}
+  

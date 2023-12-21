@@ -1,0 +1,15 @@
+﻿.poke-header {
+    max-height: 80px;
+    margin: 3px;
+}
+
+.poke-header-balls {
+    height: 59px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+}

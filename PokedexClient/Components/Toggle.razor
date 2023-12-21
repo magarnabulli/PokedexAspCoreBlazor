@@ -1,0 +1,13 @@
+﻿<label class="switch">
+	<input type="checkbox" @onclick="ChangeValue" checked="@Toggled"/>
+	<span class="slider"></span>
+	<span class="@(Toggled? "on" : "off")">
+		<span>class="@(Toggled ? "Enable" : "Disable")"</span>
+	</span>
+</label>
+@code{
+	[Parameter]
+	public bool Toggled {get;set;}
+	[Parameter]
+	public EventCallback ChangeValue {get;set;}
+}

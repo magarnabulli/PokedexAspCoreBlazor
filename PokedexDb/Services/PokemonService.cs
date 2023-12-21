@@ -17,27 +17,26 @@ namespace PokedexDb.Services
 		{
 			_db = db;
 		}
-		public async Task<List<PokemonModel>> ReadPokemonAsync()
+		public async Task<List<Pokemon>> ReadPokemonAsync()
 		{
-			var entites = await _db.Set<Pokemon>().ToListAsync();
-			return Helpers.ModelConverter.GetPokemonModelsAsync(entites);
+			return  await _db.Set<Pokemon>().ToListAsync();
+			
 		}
-		public async Task<PokemonModel> ReadOnePokemonAsync(int id)
+		public async Task<Pokemon> ReadOnePokemonAsync(int id)
 		{
 			var pokemonEntity = await _db.Pokemons.FirstOrDefaultAsync(p => p.Id == id);
-			return Helpers.ModelConverter.CreatePokemonModelAsync(pokemonEntity!);
+			return pokemonEntity!;
 		}
-		public async Task AddPokemonAsync(PokemonModel pokemon)
+		public async Task AddPokemonAsync(Pokemon pokemon)
 		{
-			var entity = Helpers.ModelConverter.CreatePokemonAsync(pokemon);
-			await _db.Set<Pokemon>().AddAsync(entity);
+			await _db.Set<Pokemon>().AddAsync(pokemon);
 			await _db.SaveChangesAsync();
 		}
-		public async Task EditPokemonAsync(int id, PokemonModel pokemon)
+		public async Task EditPokemonAsync(int id,Pokemon pokemon)
 		{
-			var entity = Helpers.ModelConverter.CreatePokemonAsync(pokemon);
-			entity.Id = id;
-			_db.Set<Pokemon>().Update(entity);
+			var pokemonEntity = await _db.Pokemons.FirstOrDefaultAsync(p => p.Id == id);
+			pokemon.Id = pokemonEntity!.Id;
+			_db.Set<Pokemon>().Update(pokemon);
 			await _db.SaveChangesAsync();
 		}
 		public async Task DeletePokemonAsync(int id)
