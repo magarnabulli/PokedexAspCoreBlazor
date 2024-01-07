@@ -1,26 +1,45 @@
-﻿<div>
-	@foreach (var type in Types)
+﻿<div class="types-container">
+	@foreach (var type in TypesBackground)
 	{
-		<CardTemplate>
+		<CardTemplate BackgroundColor="@type.Value">
 			<Title>
-				<a @onclick=@(async () => {await OnClickedType(type);}) class="card-title-link">@type.ToUpper()</a>
+				<a @onclick=@(async () => {await OnClickedType(type.Key);}) class="card-title-link">@type.Key.ToUpper()</a>
 			</Title>
+			
 		</CardTemplate>
 	}
 </div>
 @code {
 
-	public List<string> Types = new List<string>
-		{ "Bug", "Dragon", "Dark", "Electric","Fairy",
-		  "Fighting","Fire","Flying","Ghost","Ground",
-		  "Grass","Ice","Normal","Poison","Psychic",
-		  "Rock","Steel","Water"};
+	public Dictionary<string, string> TypesBackground = new Dictionary<string, string>()
+	{
+		{"Bug","var(--bug-green)"},
+		{"Dragon", "var(--dragon-teal)"},
+		{"Dark", "var(--dark-marine)"},
+		{"Electric", "var(--electric-yellow)"},
+		{ "Fairy","var(--fairy-pink)"},
+		{"Fighting", "var(--fighting-orange)"},
+		{"Fire", "var(--fire-orange)"},
+		{"Flying", "var(--flying-blue)"},
+		{"Ghost", "var(--ghost-purple)"},
+		{"Ground", "var(--ground-brown)"},
+		{"Grass", "var(--grass-green)"},
+		{"Ice", "var(--ice-blue)"},
+		{"Normal", "var(--normal-gray)"},
+		{"Poison", "var(--poison-purple)"},
+		{"Psychic", "var(--psychic-pink)"},
+		{"Rock", "var(--rock-brown)"},
+		{"Steel", "var(--steel-gray)"},
+		{"Water", "var(--water-blue)"},
+
+	};
+	
 
 	public async Task OnClickedType(string type)
 	{
 		Appstate.CurrentType = await PokeapiService.GetPokemonTypesAsync(type.ToLower());
 		Appstate.ChildContentMode = "typeinfo";
-		Navman.NavigateTo("/", false);
+		Navman.NavigateTo("/redirect", false);
 	}
 
 }

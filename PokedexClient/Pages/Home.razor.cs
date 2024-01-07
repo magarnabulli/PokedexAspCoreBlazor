@@ -4,10 +4,12 @@ namespace PokedexClient.Pages
 {
 	public partial class Home
 	{
-		protected override async Task OnInitializedAsync()
+		protected async override Task OnInitializedAsync()
 		{
-			
-			
+			if (Appstate.ChildContentMode != (""))
+			{
+				await InvokeAsync(StateHasChanged);
+			}
 		}
 	}
 }

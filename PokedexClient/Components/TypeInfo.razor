@@ -1,7 +1,11 @@
-﻿<div>
+﻿
+<div>
 	<h3>@Appstate.CurrentType.Name.ToUpper()</h3>
 </div>
 
 @code {
-
+	protected override void OnInitialized()
+	{
+		Console.WriteLine("Im here TypeInfo");
+	}
 }
