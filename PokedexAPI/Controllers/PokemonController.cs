@@ -6,8 +6,8 @@ using PokedexShared.Models;
 
 namespace PokedexAPI.Controllers
 {
-	[Route("api/pokemon")]
 	[ApiController]
+	[Route("api/[action]")]
 	public class PokemonController : ControllerBase
 	{
 		private readonly PokemonService _pokemonService;
