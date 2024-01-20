@@ -1,0 +1,34 @@
+﻿.pokeball-container{
+    padding:17px;
+}
+.pokeball {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--standard-off-white);
+    height: 45px;
+    width: 45px;
+    border-radius: 5rem;
+    border: 5px solid;
+    border-color: var(--background);
+
+}
+
+.poke-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    height: 4px;
+    width: 45px;
+}
+
+.inner-pokeball {
+    place-self: center;
+    background-color: var(--standard-off-white);
+    height: 15px;
+    width: 15px;
+    border-radius: 5rem;
+    border: 4px solid;
+    border-color: var(--background);
+}

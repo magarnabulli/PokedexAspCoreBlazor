@@ -5,9 +5,45 @@
     --standard-red: #C04C4B;
     --standard-yellow: #F0DBA5;
     --standard-off-white: #E7E7E6;
+    --poison-purple: #746488;
+    --ghost-purple: #564266;
+    --grass-green: #B4D866;
+    --bug-green: #629B48;
+    --fire-orange: #EA7D5B;
+    --fighting-orange: #C24E29;
+    --water-blue: #5E97CC;
+    --ice-blue: #CFEEFF;
+    --flying-blue: #3CB9FF;
+    --electric-yellow: #F5D76B;
+    --psychic-pink: #EE84C4;
+    --fairy-pink: #FBBBE1;
+    --steel-gray: #BCC9CF;
+    --dragon-teal: #44B2AC;
+    --ground-brown: #C88057;
+    --dark-marine: #282841;
+    --ground-brown: #6E4840;
+    --rock-brown: #7A6F6D;
+    --normal-gray: #DFD4D4;
 }
-body{
+
+.main-body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
     background-color: var(--background);
 }
 
+.main-container {
+    max-width: 70%;
+    margin: 5px;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 10px;
+    border-right: solid 10px;
+    border-bottom-color: var(--standard-red);
+    border-right-color: var(--standard-red);
+    background-color: var(--standard-off-white);
+}
 

@@ -2,14 +2,47 @@
     max-height: 80px;
     margin: 3px;
 }
-
-.poke-header-balls {
+.header-title {
+    display: flex;
+    background-color: var(--standard-red);
+    border-radius: 0.7rem;
+    height: 80px;
+    width: 300px;
+    justify-content:center;
+    align-items:center;
+}
+.header-title:hover{
+  cursor:pointer;
+}
+h1{
+    font-family: 'Kosugi', sans-serif;
+    font-size:70px;
+}
+.header-title-poke{
+    color: var(--standard-yellow);
+}
+.header-title-dex {
+    color: var(--background);
+    font-family: 'Kosugi', sans-serif;
+}
+.poke-header-balls{
     height: 59px;
+}
+
+.line{
+    display:flex;
+    height:25px;
+    width:70%;
+    background-color: var(--standard-yellow);
+    align-content:center;
+    align-items:center;
+    
 }
 
 .header {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin-bottom: 8px;
+    padding:10px;
 }

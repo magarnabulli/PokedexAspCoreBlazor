@@ -1,9 +1,29 @@
 @PokedexAPI_HostAddress = http://localhost:5099
 
-GET {{PokedexAPI_HostAddress}}/api/getpokemon
+GET {{PokedexAPI_HostAddress}}/api/get
 Accept: application/json
 
 ###
-GET https://pokeapi.co/api/v2/pokemon/ditto
+GET https://pokeapi.co/api/v2/pokemon?limit=1000&offset=0
 Accept: application/json
+###
 
+POST {{PokedexAPI_HostAddress}}/api/addpokemon/
+Content-Type: application/json
+
+{
+    "pokemon": {
+        "Id": "5",
+        "SpriteUrl": "na",
+        "PokemonType": [Fire, Ground],
+        "Name": "Test",
+        "Height": 2,
+        "Weight": 5,
+        "Health": 10,
+        "Attack": 6,
+        "Defense": 7,
+        "SpecialDefence": 9,
+        "Speed": 5
+
+    }
+}

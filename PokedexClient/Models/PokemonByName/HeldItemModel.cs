@@ -1,0 +1,8 @@
+﻿namespace PokedexClient.Models.PokemonByName
+{
+    public class HeldItemModel
+    {
+        public NameUrlModel Item { get; set; } = new NameUrlModel();
+        public ItemDetailModel[] Version_details { get; set; } = new ItemDetailModel[0];
+    }
+}

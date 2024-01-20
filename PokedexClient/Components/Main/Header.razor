@@ -1,4 +1,25 @@
 ﻿<div class="header">
-	<img src="/header/Header.png" class="poke-header" />
-	<img src="/header/pokeballs.png" class="poke-header-balls" />
+	<div class="header-title" @onclick="@BackHome">
+		<h1 class="header-title-poke">POKE</h1>
+		<h1 class="header-title-dex">DEX</h1>
+	</div>
+	<div class="line">
+		<Pokeball></Pokeball>
+		<Pokeball></Pokeball>
+		<Pokeball></Pokeball>
+		<Pokeball></Pokeball>
+		<Pokeball></Pokeball>
+		<Pokeball></Pokeball>
+		<Pokeball></Pokeball>
+		<Pokeball></Pokeball>
+		<Pokeball></Pokeball>
+		<Pokeball></Pokeball>
+		<Pokeball></Pokeball>
+	</div>
 </div>
+@code {
+	public void BackHome()
+	{
+		Navman.NavigateTo("/", true);
+	}
+}

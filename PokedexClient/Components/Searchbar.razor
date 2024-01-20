@@ -4,7 +4,7 @@
 		<button href="" @onclick=@(()=> {OnSearch();})><img src="/header/searchicon.png" class="search-icon" /></button>
 	</div>
 </div>
-@code{
+@code {
 	[Parameter]
 	public EventCallback<PokemonInfoModel> CurrentPokemon { get; set; }
 }
