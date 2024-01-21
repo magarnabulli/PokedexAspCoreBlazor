@@ -1,11 +1,13 @@
 ﻿.main-body {
     display: flex;
     flex-direction: column;
-    flex-wrap:wrap;
-    align-content:center;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
 }
 .main-container {
-    max-width: 70%;
+    max-width: 85%;
+    min-width: 70%;
     margin: 5px;
     border-radius: 1rem;
     display: flex;

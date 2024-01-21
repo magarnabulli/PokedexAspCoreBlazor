@@ -32,7 +32,7 @@ h1{
 .line{
     display:flex;
     height:25px;
-    width:70%;
+    max-width:70%;
     background-color: var(--standard-yellow);
     align-content:center;
     align-items:center;
