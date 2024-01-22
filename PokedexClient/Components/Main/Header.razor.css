@@ -20,6 +20,7 @@ h1{
 }
 .header-title-poke{
     color: var(--standard-yellow);
+    outline:none;
 }
 .header-title-dex {
     color: var(--background);

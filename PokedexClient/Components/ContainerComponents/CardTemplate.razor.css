@@ -2,21 +2,22 @@
 .card-body{
     display:flex;
     align-items:center;
-    justify-content:center;
-  
+    justify-content:center; 
     border-radius:2rem;
     margin:3px;
     min-height:100px;
     min-width:100px;
 }
-.card-header{
-
+    .card-body:hover {
+        cursor: pointer;
+    }
+.card-header {
+    font-family: 'Kosugi', sans-serif;
 }
-.card-header:hover{
-    font-size:20px;
-    color:rebeccapurple;
-  
-
-}
+    .card-header:hover {
+        font-size: 20px;
+        color: var( --standard-off-white);
+        text-shadow: 1px 1px 2px var(--background-color);
+    }
 
 /*//, 0 0 1em red, 0 0 0.2em red;*/
